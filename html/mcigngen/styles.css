@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Minecraft username generator — page-specific layout
+   Shared colours, type, buttons, inputs, panels, toasts, icons and the footer
+   come from ../src/style.css. The generator controls and name list live here.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Name style chips
+   -------------------------------------------------------------------------- */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.chip:hover {
+  border-color: var(--border-strong);
+  color: var(--text);
+}
+
+.chip[aria-pressed="true"] {
+  border-color: var(--text);
+  background: var(--text);
+  color: var(--bg);
+}
+
+/* --------------------------------------------------------------------------
+   Export form
+   -------------------------------------------------------------------------- */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.field>span {
+  display: block;
+}
+
+.textarea {
+  min-height: 9rem;
+  resize: vertical;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   Generated names
+   -------------------------------------------------------------------------- */
+
+.name-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.name-list li {
+  min-width: 0;
+}
+
+.name-list button {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 0.8125rem;
+  text-align: left;
+  overflow-wrap: anywhere;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.name-list button:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-3);
+}
+
+.name-list small {
+  flex: none;
+  font-size: 0.6875rem;
+  color: var(--subtle);
+}
+
+@media (max-width: 520px) {
+  .name-list {
+    grid-template-columns: 1fr;
+  }
+}

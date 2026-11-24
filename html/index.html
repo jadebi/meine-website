@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jannick Tobler</title>
+  <meta name="description" content="Persönliche Website von Jannick Tobler.">
+  <link rel="stylesheet" href="./src/tabler/tabler-icons.min.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="./src/theme.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap wrap--wide">
+      <a class="brand" href="./">~/jtobler.net</a>
+      <div class="header-tools">
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="./" aria-current="page">
+            <i class="ti ti-home icon icon--sm" aria-hidden="true"></i>Startseite
+          </a>
+          <a href="#projekte">
+            <i class="ti ti-layout-grid icon icon--sm" aria-hidden="true"></i>Projekte
+          </a>
+          <a href="https://github.com/jadebi">
+            <i class="ti ti-brand-github icon icon--sm" aria-hidden="true"></i>GitHub
+          </a>
+        </nav>
+        <button class="btn btn--ghost btn--sm btn--icon theme-toggle" type="button" data-theme-toggle
+          title="Dunkles Design einschalten" aria-label="Dunkles Design einschalten" aria-pressed="false">
+          <i class="ti ti-moon icon theme-icon theme-icon--moon" aria-hidden="true"></i>
+          <i class="ti ti-sun icon theme-icon theme-icon--sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap page" id="main">
+    <div class="hero">
+      <h1 class="name">Jannick Tobler</h1>
+      <p class="subtitle">Plattformentwickler | 2. Lehrjahr</p>
+    </div>
+
+    <div class="intro-grid">
+      <article class="card">
+        <h2 class="card-title">
+          <i class="ti ti-mood-smile icon" aria-hidden="true"></i>Über mich
+        </h2>
+        <hr class="rule">
+        <p>Ich hoste gerne verschiedene Dienste für mich selbst und liebe es, mit Docker zu arbeiten und Container zu
+          deployen. Zuhause betreibe ich meine eigene kleine Multi-Host On-Premise Infrastruktur (Home-Lab), auf welcher
+          ich meine Projekte durchführe.</p>
+      </article>
+
+      <article class="card">
+        <h2 class="card-title">
+          <i class="ti ti-map-pin icon" aria-hidden="true"></i>Diese Website
+        </h2>
+        <hr class="rule">
+        <p>Auf dieser Website findest du meine öffentlichen Applikationen, welche jeder benutzen und anschauen darf.
+          Ausserdem findest du hier meine Projekte und mehr über mich.</p>
+      </article>
+
+      <article class="card card--contact">
+        <h2 class="card-title">
+          <i class="ti ti-message-circle icon" aria-hidden="true"></i>Kontakt
+        </h2>
+        <hr class="rule">
+        <div class="contact">
+          <a href="mailto:business@jtobler.net">
+            <i class="ti ti-mail icon" aria-hidden="true"></i>business@jtobler.net
+          </a>
+          <a href="https://jtobler.net">
+            <i class="ti ti-world icon" aria-hidden="true"></i>jtobler.net
+          </a>
+          <a href="https://github.com/jadebi">
+            <i class="ti ti-brand-github icon" aria-hidden="true"></i>github.com/jadebi
+          </a>
+          <span>
+            <i class="ti ti-map-pin icon" aria-hidden="true"></i>Thalheim an der Thur, Zürich
+          </span>
+        </div>
+      </article>
+    </div>
+
+    <hr class="rule rule--section">
+    <p class="index-intro">Ein Index aller öffentlichen Projekte. Schau sie dir an und erkunde sie.</p>
+
+    <div class="project-grid" id="projekte">
+
+      <a class="project project--wiki" href="https://wiki.jtobler.net">
+        <h2>
+          <i class="ti ti-book icon" aria-hidden="true"></i>debiwiki
+        </h2>
+        <p>Wissensdatenbank und Dokumentations-Wiki über alles Mögliche.</p>
+      </a>
+
+      <a class="project project--blog" href="https://blog.jtobler.net">
+        <h2>
+          <i class="ti ti-news icon" aria-hidden="true"></i>Blog
+        </h2>
+        <p>Mein persönlicher Blog!! Vielleicht gibt es etwas, das dein Interesse weckt?</p>
+      </a>
+
+      <a class="project project--files" href="/files/">
+        <h2>
+          <i class="ti ti-download icon" aria-hidden="true"></i>Dateien
+        </h2>
+        <p>Einfache statische Dateien für verschiedene Zwecke.</p>
+      </a>
+
+      <a class="project project--todo" href="https://todo.jtobler.net">
+        <h2>
+          <i class="ti ti-list icon" aria-hidden="true"></i>ToDo-Liste
+        </h2>
+        <p>Nur meine <em>private</em> ToDo-Liste.<br>Nichts Interessantes.</p>
+      </a>
+
+      <a class="project project--ffcrash" href="./ffcrash/">
+        <h2>
+          <i class="ti ti-flame icon" aria-hidden="true"></i>Firefox Crash
+        </h2>
+        <p>Bring deinen ganzen Firefox zum Absturz, indem du eine riesige Menge an Textzeichen sehr schnell rendern
+          lässt.</p>
+      </a>
+
+      <a class="project project--minecraft" href="./mcigngen/">
+        <h2>
+          <i class="ti ti-brand-minecraft icon" aria-hidden="true"></i>MC IGN Gen
+        </h2>
+        <p><b>Minecraft In-Game Username Generator</b>, generiere realistische Minecraft Usernames in verschiedenen
+          Stilen.</p>
+      </a>
+
+      <a class="project project--twitch" href="./multitwitch/">
+        <h2>
+          <i class="ti ti-brand-twitch icon" aria-hidden="true"></i>Multitwitch
+        </h2>
+        <p>Verfolge mehrere Twitch-Streams gleichzeitig im Multi-View-Layout.</p>
+      </a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--wide site-footer__inner">
+      <span>© 2026 Jannick Tobler</span>
+      <nav class="site-footer__links" aria-label="Fusszeile">
+        <a href="mailto:business@jtobler.net">
+          <i class="ti ti-mail icon icon--sm" aria-hidden="true"></i>E-Mail
+        </a>
+        <a href="https://github.com/jadebi">
+          <i class="ti ti-brand-github icon icon--sm" aria-hidden="true"></i>GitHub
+        </a>
+        <a href="./sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /ffcrash/
+Disallow: /malena/
+Disallow: /files/
+
+# Sitemap
+Sitemap: https://jtobler.net/sitemap.xml

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multitwitch – Jannick Tobler</title>
+  <meta name="description"
+    content="Verfolge mehrere Twitch-Streams gleichzeitig in einem anpassbaren Multi-View-Layout.">
+  <link rel="stylesheet" href="../src/tabler/tabler-icons.min.css">
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../src/theme.js"></script>
+  <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body class="app-page project--twitch">
+  <a class="skip-link" href="#stage">Zum Inhalt springen</a>
+
+  <main class="app" id="main">
+    <header class="bar" id="bar" role="toolbar" aria-label="Streams und Layout">
+      <a class="btn btn--ghost btn--sm btn--icon bar-back" href="../" title="Zur Startseite"
+        aria-label="Zur Startseite">
+        <i class="ti ti-arrow-left icon" aria-hidden="true"></i>
+      </a>
+      <p class="brand-path bar-brand"><a class="brand" href="../">~/jtobler.net</a><span
+          class="bar-brand-suffix">/multitwitch</span></p>
+
+      <div class="search">
+        <i class="ti ti-search icon icon--sm search-icon" aria-hidden="true"></i>
+        <textarea id="in" rows="1" placeholder="Streamer: name1, name2"
+          title="Twitch-Usernamen durch Komma getrennt eingeben und Enter drücken"
+          aria-label="Twitch-Usernamen suchen oder hinzufügen" autocomplete="off"></textarea>
+        <div id="sug" class="suggestions" hidden></div>
+      </div>
+
+      <button id="add" class="btn btn--primary btn--sm" type="button" aria-label="Stream hinzufügen">
+        <i class="ti ti-plus icon" aria-hidden="true"></i><span class="btn-label">Hinzufügen</span>
+      </button>
+
+      <div class="seg" id="layouts" role="group" aria-label="Layout"></div>
+
+      <button id="audio" class="btn btn--ghost btn--sm mode" type="button"
+        aria-label="Tonmodus wechseln" title="Tonmodus: Tastatur (klicken zum Wechseln)">
+        <i id="audio-icon" class="ti ti-keyboard icon" aria-hidden="true"></i><span id="audio-label">Tastatur</span>
+      </button>
+      <span class="sp"></span>
+
+      <div class="bar-actions">
+        <button id="clear" class="btn btn--ghost btn--sm btn--icon" type="button" title="Alle Streams entfernen"
+          aria-label="Alle Streams entfernen">
+          <i class="ti ti-trash icon" aria-hidden="true"></i>
+        </button>
+        <button id="share" class="btn btn--ghost btn--sm btn--icon" type="button"
+          title="Link mit Streams und Layout kopieren" aria-label="Link mit Streams und Layout kopieren">
+          <i class="ti ti-link icon" aria-hidden="true"></i>
+        </button>
+        <button id="cog" class="btn btn--ghost btn--sm btn--icon" type="button" title="Einstellungen"
+          aria-label="Einstellungen öffnen">
+          <i class="ti ti-settings icon" aria-hidden="true"></i>
+        </button>
+        <button id="hide" class="btn btn--ghost btn--sm btn--icon" type="button" title="Toolbar ausblenden"
+          aria-label="Toolbar ausblenden">
+          <i class="ti ti-chevron-up icon" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn--ghost btn--sm btn--icon theme-toggle" type="button" data-theme-toggle
+          title="Dunkles Design einschalten" aria-label="Dunkles Design einschalten" aria-pressed="false">
+          <i class="ti ti-moon icon theme-icon theme-icon--moon" aria-hidden="true"></i>
+          <i class="ti ti-sun icon theme-icon theme-icon--sun" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <div class="workspace">
+      <div id="stage">
+        <div id="empty">
+          <div class="empty-card">
+            <i class="ti ti-device-tv icon icon--lg" aria-hidden="true"></i>
+            <p>Füge oben Twitch-Usernamen hinzu, um mitzuschauen.</p>
+            <p class="hint">Öffne die Einstellungen, um alle Tastenkürzel zu sehen und anzupassen.</p>
+          </div>
+        </div>
+        <div id="chats" class="chats" aria-label="Twitch-Chat" hidden></div>
+      </div>
+      <aside id="chatpane" class="chatpane" aria-label="Twitch-Chats" hidden></aside>
+    </div>
+
+    <button id="tab" class="btn btn--ghost btn--sm btn--icon" type="button" title="Toolbar anzeigen"
+      aria-label="Toolbar anzeigen">
+      <i class="ti ti-chevron-down icon" aria-hidden="true"></i>
+    </button>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="dlg">
+    <div class="dialog-head">
+      <h2 class="panel-title">
+        <i class="ti ti-settings icon" aria-hidden="true"></i>Einstellungen
+      </h2>
+      <button id="close" class="btn btn--ghost btn--icon btn--sm" type="button" title="Schliessen"
+        aria-label="Einstellungen schliessen">
+        <i class="ti ti-x icon" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="dialog-body" id="sb"></div>
+  </dialog>
+</body>
+
+</html>

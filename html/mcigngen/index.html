@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minecraft Username Generator – Jannick Tobler</title>
+  <meta name="description"
+    content="Generiere realistische Minecraft-Java-Usernames in verschiedenen Stilen und exportiere sie als Liste.">
+  <link rel="stylesheet" href="../src/tabler/tabler-icons.min.css">
+  <link rel="stylesheet" href="../src/style.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="../src/theme.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="wrap wrap--wide">
+      <p class="brand-path"><a class="brand" href="../">~/jtobler.net</a>/mcigngen</p>
+      <button class="btn btn--ghost btn--sm btn--icon theme-toggle" type="button" data-theme-toggle
+        title="Dunkles Design einschalten" aria-label="Dunkles Design einschalten" aria-pressed="false">
+        <i class="ti ti-moon icon theme-icon theme-icon--moon" aria-hidden="true"></i>
+        <i class="ti ti-sun icon theme-icon theme-icon--sun" aria-hidden="true"></i>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap page" id="main">
+    <header class="page-head">
+      <p class="eyebrow">
+        <i class="ti ti-brand-minecraft icon icon--sm" aria-hidden="true"></i>Minecraft Java
+      </p>
+      <h1 class="page-title">Username Generator</h1>
+      <p class="page-lead">Realistische Namen im Stil von Hypixel, DonutSMP und Co. Klicke einen Namen zum Kopieren
+        oder exportiere eine ganze Liste.</p>
+    </header>
+
+    <div class="stack">
+      <section class="panel" aria-labelledby="generator-title">
+        <div class="panel-head">
+          <h2 class="panel-title" id="generator-title">
+            <i class="ti ti-list icon" aria-hidden="true"></i>Namensstil
+          </h2>
+          <button class="btn btn--primary" id="go" type="button">
+            <i class="ti ti-wand icon" aria-hidden="true"></i>Mehr generieren
+          </button>
+        </div>
+        <div class="panel-body">
+          <div class="chips" id="chips" role="group" aria-label="Namensstil"></div>
+          <ul id="out" class="name-list" aria-live="polite"></ul>
+          <p class="hint">
+            <i class="ti ti-keyboard icon icon--sm" aria-hidden="true"></i>Leertaste generiert neue Namen.
+          </p>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="export-title">
+        <div class="panel-head">
+          <h2 class="panel-title" id="export-title">
+            <i class="ti ti-file-download icon" aria-hidden="true"></i>Liste exportieren (.txt)
+          </h2>
+        </div>
+        <div class="panel-body">
+          <div class="form-grid">
+            <label class="field">Anzahl eindeutige Namen
+              <input type="number" id="cnt" value="100" min="1" max="50000">
+            </label>
+            <label class="field">Min. Länge
+              <input type="number" id="min" value="3" min="3" max="16">
+            </label>
+            <label class="field">Max. Länge
+              <input type="number" id="max" value="16" min="3" max="16">
+            </label>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn--primary" id="dl" type="button">
+              <i class="ti ti-download icon" aria-hidden="true"></i>Als .txt herunterladen
+            </button>
+            <button class="btn" id="cp" type="button">
+              <i class="ti ti-copy icon" aria-hidden="true"></i>Alles kopieren
+            </button>
+          </div>
+
+          <p id="status" class="hint" role="status" aria-live="polite"></p>
+          <textarea id="ta" class="textarea" readonly aria-label="Exportierte Namensliste" hidden></textarea>
+        </div>
+      </section>
+
+      <section class="panel panel--muted">
+        <div class="panel-body">
+          <p class="hint">
+            <i class="ti ti-info-circle icon icon--sm" aria-hidden="true"></i>Verwendet den oben gewählten Stil, ein
+            Name pro Zeile. Namen sind zufällig und können bereits
+            vergeben sein. Prüfe sie auf namemc.com.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap wrap--wide site-footer__inner">
+      <span>© 2026 Jannick Tobler</span>
+      <nav class="site-footer__links" aria-label="Fusszeile">
+        <a href="mailto:business@jtobler.net">
+          <i class="ti ti-mail icon icon--sm" aria-hidden="true"></i>E-Mail
+        </a>
+        <a href="https://github.com/jadebi">
+          <i class="ti ti-brand-github icon icon--sm" aria-hidden="true"></i>GitHub
+        </a>
+        <a href="../sitemap.xml">Sitemap</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+
+</html>

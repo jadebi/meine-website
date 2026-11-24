@@ -1,0 +1,18 @@
+services:
+  webseite:
+    container_name: meineseite
+    image: meineseite:1.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      tags:
+        - meineseite:1.0
+        - meineseite:latest
+    ports:
+      - 8081:80
+    healthcheck:
+      test: [ "CMD", "curl", "-s", "localhost:80" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
